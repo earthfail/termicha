@@ -5,5 +5,6 @@
 # -o pipefail : pipe return value is zero if all commands succeeded, otherwise the last non-zero exit
 set -euo pipefail
 # works for linux
-gcc -o linux-frontend.exe main.cpp -lncurses
+CFLAGS="-g -std=c++11 -Wall -pedantic-errors"
+gcc $CFLAGS -o linux-frontend.exe main.cpp -lncurses
 
